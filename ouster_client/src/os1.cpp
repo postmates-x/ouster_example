@@ -89,10 +89,10 @@ int udp_data_socket(int port) {
         return -1;
     }
 
-    if (fcntl(sock_fd, F_SETFL, fcntl(sock_fd, F_GETFL, 0) | O_NONBLOCK) < 0) {
-        std::cerr << "udp fcntl(): " << std::strerror(errno) << std::endl;
-        return -1;
-    }
+    //if (fcntl(sock_fd, F_SETFL, fcntl(sock_fd, F_GETFL, 0) | O_NONBLOCK) < 0) {
+    //    std::cerr << "udp fcntl(): " << std::strerror(errno) << std::endl;
+    //    return -1;
+    //}
 
     return sock_fd;
 }
